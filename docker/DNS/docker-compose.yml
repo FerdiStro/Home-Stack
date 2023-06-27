@@ -1,0 +1,21 @@
+version: '3'
+services:
+  cloudflare-ddns:
+    image: oznu/cloudflare-ddns:latest
+    restart: always
+    environment:
+      - API_KEY_FILE=/run/secrets/cloudflare_API_PW
+      - ZONE_FILE=/run/secrets/cloudflare_ZONE
+      - PROXIED=true
+      - PUID=998
+      - PGID=100
+    volumes:
+      - cloudflare_API_PW:/run/secrets/cloudflare_API_PW
+      - cloudflare_ZONE:/run/secrets/cloudflare_ZONE
+
+volumes:
+  cloudflare_API_PW:
+    external: true
+  cloudflare_ZONE:
+    external: true
+
