@@ -5,6 +5,8 @@ Create Secrets with Dockers own secret Engien
 
 
 - Secrets for Cloudflare
-echo "nextcloud-api-PW" | docker secret create nextcloud_API_PW -
-echo "nextcloud-zone" | docker secret create nextcloud_ZONE -
+Create a File with the name 'cloudflare_secrets.txt'. Add <br>
+'API_KEY=<yourAPIKEY>
+ ZONE=<yourZONE>'
+
 - Secrets for Nextcloud
