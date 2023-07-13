@@ -11,6 +11,6 @@ Curl-Script from [GitHub](https://github.com/angristan/openvpn-install)
 ### Run: 
 `./openpn-install.sh`<br>
 ### Start the VPN <br>
-Drop yout .ovpn File in the Folder and edit the .sh File if your config didn't name like 'vpnhome.ovpn' <br>
+Drop your `.ovpn-File` in the Folder and edit the `start-vpn.sh` File if your config didn't name like `vpnhome.ovpn` <br> <br>
 Execute  `./start-vpn.sh`<br>
 
