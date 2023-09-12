@@ -3,13 +3,26 @@ Instructions for Docker.
 
 ### Adding Docker Secrets
 - Secrets for Cloudflare: <br><br>
-Create a file named `cloudflare_secrets.txt` in `/docker/DNS`. <br>
+Create a file named `cloudflare_secrets.env` in `/docker/DNS`. <br>
 Add the following lines to the file: <br>
    - `API_KEY=<yourAPIKEY>`
-   - `ZONE=<yourZONE>`
+   - `ZONE=<yourZONE>`i
+
+- Secrets for Proxy: <br><br>
+Create a file named `proxy-secrets.env` in `/docker/PROXY`.<br>
+Add the following lines to the file: <br>
+   - `DB_MYSQL_HOST=db`
+   - `DB_MYSQL_PORT=3306`
+   - `DB_MYSQL_USER=<yourMYSQL_USER>`
+   - `DB_MYSQL_PASSWORD=<yourMYSQL_PASSWORD>`
+   - `DB_MYSQL_NAME=<yourMYSQL_NAME>`
+   - `MYSQL_ROOT_PASSWORD=<yourMYSQL_ROOT_PW>`
+   - `MYSQL_DATABASE=<yourMYSQL_DATABASE>`
+   - `MYSQL_USER=<yourMYSQL_USER>`
+   - `MYSQL_PASSWORD=<yourMYSQL_PW>`
 <br><br>
 - Secrets for Nextcloud:  <br><br>
-Create a file named `nextcloud_secrets.txt` in `/docker/nextcloud`. <br>
+Create a file named `nextcloud_secrets.env` in `/docker/nextcloud`. <br>
 Add the following lines to the file: <br>
    - `MYSQL_ROOT_PASSWORD=<yourMYSQL_ROOT_PW>`
    - `MYSQL_DATABASE=<yourMYSQL_DATABSE>`
@@ -43,4 +56,5 @@ Nextcloud can now be accessed at: `yourServerName:8080`
 
 ### Setting up/down Docker Stacks
 To set up the stack, use the `./setDockerUP.sh` script. <br>
-To tear down the stack, use the `./setDockerDOWN.sh` script.
+To set down the stack, use the `./setDockerDOWN.sh` script. <br>
+To restart the stack, use the `./restartDocker.sh` script.
