@@ -6,7 +6,20 @@ Instructions for Docker.
 Create a file named `cloudflare_secrets.env` in `/docker/DNS`. <br>
 Add the following lines to the file: <br>
    - `API_KEY=<yourAPIKEY>`
-   - `ZONE=<yourZONE>`i
+   - `ZONE=<yourZONE>`
+
+<br><br>
+
+- Secrets for Sonar: <br><br>
+Create a file named `sonar-secrets.env` in `/docker/SONAR`.<br>
+Add the following lines to the file: <br>
+   - `POSTGRES_USER=<yourPOSTGRES_USER>`
+   - `POSTGRES_PASSWORD=<yourPOSTGRES_PASSWORD>`
+   - `POSTGRES_DB=sonarqube`
+   - `SONARQUBE_JDBC_USERNAME=<yourPOSTGRES_USER>`
+   - `SONARQUBE_JDBC_PASSWORD=<yourPOSTGRES_PASSWORD>`
+<br>
+Sonar will listen on port 9000. Standard credentials are USER: admin ; PASSWORD: admin<br><br>  	 
 
 - Secrets for Proxy: <br><br>
 Create a file named `proxy-secrets.env` in `/docker/PROXY`.<br>
